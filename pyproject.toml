@@ -13,5 +13,8 @@ authors = [{ name = "Connor Tippets" }]
 
 dependencies = []
 
+[project.urls]
+Repository = "https://github.com/ConnorTippets/pyr34"
+
 [tool.setuptools.packages.find]
 where = ["src"]
