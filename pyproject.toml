@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyr34"
-version = "0.1.1"
+version = "0.2.1"
 description = "Wrapper around the JSON/XML rule34.xxx API."
 readme = "README.md"
 requires-python = ">=3.10"
