@@ -271,7 +271,7 @@ class ClientAPI:
 
         return post
 
-    def get_comments(self, post_id: int) -> list[Comment]:
+    def get_comments(self, post: Post) -> list[Comment]:
         """Fetch the comments of a post.
 
         Parameters
@@ -287,9 +287,9 @@ class ClientAPI:
         Notes
         -----------
             | Logs fetch at INFO level."""
-        self._log.info(f"Fetching comments under post with id {post_id}")
+        self._log.info(f"Fetching comments under post with id {post.id}")
 
-        api_response = self._request({"s": "comment", "q": "index", "post_id": post_id})
+        api_response = self._request({"s": "comment", "q": "index", "post_id": post.id})
 
         if not isinstance(api_response, ET.Element):
             self._log.error(
@@ -301,8 +301,6 @@ class ClientAPI:
 
         if not raw_comments:
             return []
-
-        post = self.get_post(post_id)
 
         comments = []
         for raw_comment in raw_comments:
