@@ -302,6 +302,8 @@ class ClientAPI:
         if not raw_comments:
             return []
 
+        post = self.get_post(post_id)
+
         comments = []
         for raw_comment in raw_comments:
             attrs = raw_comment.attrib
@@ -311,7 +313,7 @@ class ClientAPI:
                     datetime.strptime(attrs["created_at"], "%Y-%m-%d %H:%M").replace(
                         tzinfo=timezone.utc
                     ),
-                    post_id,
+                    post,
                     attrs["body"][:-1],  # r34 puts an extra space?
                     attrs["creator"],
                     int(attrs["id"]),
