@@ -51,8 +51,8 @@ class Comment:
     -----------
     id: :class:`int`
         ID of the comment.
-    post_id: :class:`int`
-        ID of the post the comment is under.
+    post: :class:`Post`
+        Post the comment is under.
     content: :class:`str`
         Content of the comment.
     author: :class:`str`

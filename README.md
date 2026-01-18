@@ -76,12 +76,12 @@ id: `int` \
 
 ------
 
-`get_comments(post_id: int) -> list[Comments]` \
+`get_comments(post: Post) -> list[Comments]` \
 &nbsp;&nbsp;&nbsp;&nbsp;Fetch the comments of a post.
 
 #### Parameters
-post_id: `int` \
-&nbsp;&nbsp;&nbsp;&nbsp;ID of the post to fetch comments from.
+post: `Post` \
+&nbsp;&nbsp;&nbsp;&nbsp;Post to fetch comments from.
 
 #### Returns
 `list[Comment]` \
@@ -159,8 +159,8 @@ Represents a comment.
 id: `int` \
 &nbsp;&nbsp;&nbsp;&nbsp;ID of the comment.
 
-post_id: `int` \
-&nbsp;&nbsp;&nbsp;&nbsp;ID of the post the comment is under.
+post: `Post` \
+&nbsp;&nbsp;&nbsp;&nbsp;Post the comment is under.
 
 content: `str` \
 &nbsp;&nbsp;&nbsp;&nbsp;Content of the comment.

@@ -276,8 +276,8 @@ class ClientAPI:
 
         Parameters
         -----------
-        post_id: :class:`int`
-            ID of the post to fetch comments from.
+        post: :class:`Post`
+            Post to fetch comments from.
 
         Returns
         -----------
