@@ -133,7 +133,7 @@ class Post:
 
     def get_comments(self):
         """Fetch comments of post."""
-        return self._client.get_comments(self.id)
+        return self._client.get_comments(self)
 
     def get_url(self):
         """URL of post."""
