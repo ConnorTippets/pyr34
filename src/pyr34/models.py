@@ -63,7 +63,7 @@ class Comment:
 
     _raw: dict
     created_at: datetime
-    post_id: int
+    post: "Post"
     content: str
     author: str
     id: int
@@ -81,7 +81,7 @@ class Comment:
         return self.content
 
     def __repr__(self) -> str:
-        return f"<Comment #{self.id} content={repr(self.content)} author={repr(self.author)} post={self.post_id}>"
+        return f"<Comment #{self.id} content={repr(self.content)} author={repr(self.author)} post={self.post.id}>"
 
 
 @dataclass
